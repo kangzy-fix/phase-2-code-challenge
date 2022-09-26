@@ -1,6 +1,10 @@
 import React from "react";
 
+// import React, {useState} from "react";
+
 function Search() {
+ 
+  
   return (
     <div className="ui large fluid icon input">
       <input
