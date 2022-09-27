@@ -2,18 +2,20 @@ import React from "react";
 import {useState} from "react"
 
 function AddTransactionForm({cash}) {
-    const [data, setData] = useState(
-
-     {
+    const [data, setData] = useState( {
       date : "",
       description : "",
       category: "",
-      amount : ""})
+      amount : ""
+    })
      
 function set (e) {
   e.preventDefault()
 setData({...data, [e.target.name]:e.target.value })
 }
+
+
+
 function handleSubmit (e) {
 let upd = "http://localhost:8001/transactions"
 fetch (upd,{ 
@@ -46,3 +48,8 @@ body : JSON.stringify(data)
 }
 
 export default AddTransactionForm;
+
+
+//function nextId () {
+  //Math.floor(Math.random()*10)
+//}

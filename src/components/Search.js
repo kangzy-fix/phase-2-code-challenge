@@ -11,8 +11,6 @@ function Search({searcher}) {
     setFilter([ e.target.value])
 
     searcher(filter)
-
-    
   }
 
   return (

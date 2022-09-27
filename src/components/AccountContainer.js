@@ -6,8 +6,8 @@ import {useState, useEffect} from "react"
 
 
 function AccountContainer() {
-  let API = "http://localhost:8000/transactions"
-  const [listFilter, setListFilter] = useState ("")
+  let API = "http://localhost:8001/transactions"
+  //const [listFilter, setListFilter] = useState ("")
   const [list, setList] = useState([])
   
   useEffect (()=>{
@@ -23,10 +23,6 @@ function handleSearch (filter) {
   setList(list => list.filter(item=>item.description.startsWith(filter)))
 }
 
-
-
-
-  
   return (
     <div>
       <Search searcher={handleSearch}/>
